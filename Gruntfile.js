@@ -1,6 +1,18 @@
 module.exports = function(grunt) {
 
+  grunt.loadNpmTasks('grunt-concurrent');
+  grunt.loadNpmTasks('grunt-nodemon');
+  grunt.loadNpmTasks('grunt-nightwatch');
+
   grunt.initConfig({
+    concurrent: {
+      target: {
+        tasks: ['nodemon', 'nightwatch'],
+        options: {
+          logConcurrentOutput: true
+        }
+      }
+    },
     nodemon: {
       dev: {
         script: 'index.js',
@@ -8,10 +20,13 @@ module.exports = function(grunt) {
           nodeArgs: ['--harmony']
         }
       }
+    },
+    nightwatch: {
+      options: {
+      }
     }
   });
 
-  grunt.loadNpmTasks('grunt-nodemon');
-
-  grunt.registerTask('default', 'nodemon');
+  grunt.registerTask('features', ['nodemon', 'nightwatch']);
+  grunt.registerTask('default', ['concurrent:target']);
 };
