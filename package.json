@@ -11,5 +11,8 @@
   "license": "ISC",
   "devDependencies": {
     "nightwatch": "^0.8.15"
+  },
+  "dependencies": {
+    "express": "^4.13.4"
   }
 }

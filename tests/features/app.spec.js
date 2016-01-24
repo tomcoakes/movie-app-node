@@ -3,7 +3,7 @@ module.exports = {
     browser
       .url('http://localhost:1337')
       .waitForElementVisible('h1', 1000)
-      .assert.containsText('h1', 'Movide Database App')
+      .assert.containsText('h1', 'Movie Database App')
       .end();
   }
 };
