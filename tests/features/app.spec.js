@@ -1,13 +1,9 @@
 module.exports = {
-  'Demo test for Google' : function(browser) {
+  'Server renders the heading text' : function(browser) {
     browser
-      .url('http://www.google.com')
-      .waitForElementVisible('body', 1000)
-      .setValue('input[type=text]', 'Tom Coakes')
-      .waitForElementVisible('button[name=btnG]', 1000)
-      .click('button[name=btnG]')
-      .pause(1000)
-      .assert.containsText('#main', 'Tom Coakes')
+      .url('http://localhost:1337')
+      .waitForElementVisible('h1', 1000)
+      .assert.containsText('h1', 'Movide Database App')
       .end();
   }
 };
