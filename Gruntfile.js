@@ -27,6 +27,5 @@ module.exports = function(grunt) {
     }
   });
 
-  grunt.registerTask('features', ['nodemon', 'nightwatch']);
   grunt.registerTask('default', ['concurrent:target']);
 };
