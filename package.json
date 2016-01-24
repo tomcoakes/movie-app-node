@@ -10,6 +10,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-nodemon": "^0.4.1",
     "nightwatch": "^0.8.15"
   },
   "dependencies": {
