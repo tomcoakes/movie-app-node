@@ -14,6 +14,7 @@
     "grunt-concurrent": "^2.1.0",
     "grunt-nightwatch": "^0.5.2",
     "grunt-nodemon": "^0.4.1",
+    "grunt-notify": "^0.4.3",
     "nightwatch": "^0.8.15"
   },
   "dependencies": {

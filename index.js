@@ -4,7 +4,7 @@ const app = express();
 const port = 3000;
 
 app.get('/', (req, res) => {
-  res.send('Movie Database App');
+  res.send('Movie Databaseh App');
 });
 
 app.listen(port, function() {
