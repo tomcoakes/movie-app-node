@@ -7,7 +7,7 @@ module.exports = function(grunt) {
   grunt.initConfig({
     concurrent: {
       target: {
-        tasks: ['nodemon', 'nightwatch'],
+        tasks: ['nodemon'],
         options: {
           logConcurrentOutput: true
         }
@@ -28,4 +28,5 @@ module.exports = function(grunt) {
   });
 
   grunt.registerTask('default', ['concurrent:target']);
+  grunt.registerTask('featureTests', ['nightwatch']);
 };
