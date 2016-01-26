@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "./nightwatch",
+    "features": "grunt featureTests",
     "start": "node --harmony ./index.js"
   },
   "author": "",
