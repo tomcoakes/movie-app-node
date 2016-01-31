@@ -29,5 +29,5 @@ module.exports = function(grunt) {
   });
 
   grunt.registerTask('default', ['concurrent:target']);
-  grunt.registerTask('featureTests', ['nightwatch']);
+  grunt.registerTask('test', ['nightwatch']);
 };
