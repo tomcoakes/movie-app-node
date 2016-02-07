@@ -2,7 +2,7 @@
   "name": "movie-app-node",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "features": "grunt featureTests",
     "start": "node --harmony ./index.js"
