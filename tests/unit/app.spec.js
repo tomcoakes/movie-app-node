@@ -23,11 +23,11 @@ describe('routes', () => {
   describe('\'movie\' route', () => {
     it('responds with a 200 status code when provided with a title parameter', (done) => {
       supertest(app)
-        .get('/movie?t=inception')
+        .get('/movie?title=inception')
         .expect(200, done);
     });
 
-    xit('responds with a 404 error when not provided with a title parameter', (done) => {
+    it('responds with a 404 status code when title parameter is missing', (done) => {
       supertest(app)
         .get('/movie')
         .expect(404, done);
