@@ -8,10 +8,16 @@ describe('routes', () => {
 
   describe('root route', () => {
 
-    it('responds with a 200 status code (supertest)', (done) => {
+    it('responds with a 200 status code', (done) => {
       supertest(app)
         .get('/')
         .expect(200, done);
+    });
+
+    it('responds with html', (done) => {
+      supertest(app)
+        .get('/')
+        .expect('Content-Type', /html/, done);
     });
 
   });
