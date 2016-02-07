@@ -16,7 +16,7 @@ module.exports = function(grunt) {
     },
     nodemon: {
       dev: {
-        script: 'server.js',
+        script: 'main.js',
         options: {
           nodeArgs: ['--harmony']
         }

@@ -2,7 +2,7 @@
   "name": "movie-app-node",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "main.js",
   "scripts": {
     "features": "grunt featureTests",
     "start": "grunt default",
@@ -18,7 +18,8 @@
     "grunt-nodemon": "^0.4.1",
     "grunt-notify": "^0.4.3",
     "mocha": "^2.4.5",
-    "nightwatch": "^0.8.15"
+    "nightwatch": "^0.8.15",
+    "supertest": "^1.1.0"
   },
   "dependencies": {
     "express": "^4.13.4",
