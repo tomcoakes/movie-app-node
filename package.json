@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "features": "grunt featureTests",
-    "start": "node --harmony ./index.js"
+    "start": "grunt default"
   },
   "author": "",
   "license": "ISC",

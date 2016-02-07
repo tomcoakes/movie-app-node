@@ -16,7 +16,7 @@ module.exports = function(grunt) {
     },
     nodemon: {
       dev: {
-        script: 'index.js',
+        script: 'server.js',
         options: {
           nodeArgs: ['--harmony']
         }
@@ -28,6 +28,6 @@ module.exports = function(grunt) {
     }
   });
 
-  grunt.registerTask('default', ['concurrent:target']);
+  grunt.registerTask('default', ['nodemon']);
   grunt.registerTask('featureTests', ['nightwatch']);
 };
