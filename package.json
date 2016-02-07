@@ -5,19 +5,23 @@
   "main": "server.js",
   "scripts": {
     "features": "grunt featureTests",
-    "start": "grunt default"
+    "start": "grunt default",
+    "test": "./node_modules/.bin/mocha ./tests/unit"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "chai": "^3.5.0",
     "grunt": "^0.4.5",
     "grunt-concurrent": "^2.1.0",
     "grunt-nightwatch": "^0.5.2",
     "grunt-nodemon": "^0.4.1",
     "grunt-notify": "^0.4.3",
+    "mocha": "^2.4.5",
     "nightwatch": "^0.8.15"
   },
   "dependencies": {
-    "express": "^4.13.4"
+    "express": "^4.13.4",
+    "request": "^2.69.0"
   }
 }
