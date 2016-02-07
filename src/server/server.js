@@ -9,5 +9,9 @@ module.exports = () => {
     res.sendFile(path.join(viewsPath + '/index.html'));
   });
 
+  app.get('/movie', (req, res) => {
+    res.end();
+  });
+
   return app;
 };
