@@ -1,19 +1,16 @@
 const request = require('request');
 
+const requestMovie = require('./services/getMovieService');
+
 module.exports = {
   getMovie: getMovie
 };
 
 function getMovie() {
   return (req, res) => {
-    if(!req.query.title) {res.sendStatus(404);}
-
-    request(`http://www.omdbapi.com/?t=${req.query.title}`, (err, response, body) => {
-      if(err) {console.log(err);}
-      console.log(response.body);
-      const movieTitle = JSON.parse(response.body).Title;
-      res.send(movieTitle);
+    if(!req.query.title) {return res.sendStatus(404);}
+    requestMovie(req.query.title, function(result) {
+      res.send(result);
     });
-
   };
 }
