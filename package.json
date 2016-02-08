@@ -6,7 +6,7 @@
   "scripts": {
     "features": "grunt featureTests",
     "start": "grunt default",
-    "test": "./node_modules/.bin/mocha ./tests/unit"
+    "test": "./node_modules/.bin/mocha ./tests/unit/**"
   },
   "author": "",
   "license": "ISC",
@@ -19,6 +19,7 @@
     "grunt-notify": "^0.4.3",
     "mocha": "^2.4.5",
     "nightwatch": "^0.8.15",
+    "nock": "^7.0.2",
     "supertest": "^1.1.0"
   },
   "dependencies": {
