@@ -2,11 +2,20 @@ const expect = require('chai').expect;
 const request = require('request');
 const supertest = require('supertest');
 
-const app = require('../../src/server/server.js')();
+const server = require('../../src/server/server.js');
+
+const fakegetMovieService = {
+  getMovie: function(movieTitle, callback) {
+    return callback('Inception');
+  }
+};
+
+const app = server(fakegetMovieService);
 
 describe('routes', () => {
 
   describe('\'root\' route', () => {
+
     it('responds with a 200 status code', (done) => {
       supertest(app)
         .get('/')
@@ -21,6 +30,7 @@ describe('routes', () => {
   });
 
   describe('\'movie\' route', () => {
+
     it('responds with a 200 status code when provided with a title parameter', (done) => {
       supertest(app)
         .get('/movie?title=inception')
