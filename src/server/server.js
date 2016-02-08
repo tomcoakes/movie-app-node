@@ -2,7 +2,9 @@ const express = require('express');
 const app = express();
 const path = require('path');
 
-const routes = require('./routes')();
+const Routes = require('./routes');
+const routes = new Routes();
+
 const viewsPath = path.resolve('src/client/views');
 
 module.exports = () => {
