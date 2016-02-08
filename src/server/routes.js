@@ -2,7 +2,7 @@ const request = require('request');
 
 const requestMovie = require('./services/getMovieService');
 
-module.exports = () => {
+module.exports = function() {
 
   const routes = {};
 
@@ -13,7 +13,7 @@ module.exports = () => {
         res.send(result);
       });
     };
-  }
+  };
 
   return routes;
 
