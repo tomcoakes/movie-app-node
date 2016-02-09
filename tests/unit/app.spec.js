@@ -4,13 +4,13 @@ const supertest = require('supertest');
 
 const server = require('../../src/server/server.js');
 
-const fakegetMovieService = {
+const fakeMovieService = {
   getMovie: function(movieTitle, callback) {
     return callback('Inception');
   }
 };
 
-const app = server(fakegetMovieService);
+const app = server(fakeMovieService);
 
 describe('routes', () => {
 

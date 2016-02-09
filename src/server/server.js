@@ -6,8 +6,8 @@ const path = require('path');
 const Routes = require('./routes');
 const viewsPath = path.resolve('src/client/views');
 
-module.exports = (getMovieService) => {
-  const routes = new Routes(getMovieService);
+module.exports = (movieService) => {
+  const routes = new Routes(movieService);
 
   app.get('/', (req, res) => {
     res.sendFile(path.join(viewsPath + '/index.html'));
