@@ -23,6 +23,7 @@
     "supertest": "^1.1.0"
   },
   "dependencies": {
+    "ejs": "^2.4.1",
     "express": "^4.13.4",
     "request": "^2.69.0"
   }

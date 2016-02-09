@@ -4,13 +4,14 @@ const path = require('path');
 
 
 const Routes = require('./routes');
-const viewsPath = path.resolve('src/client/views');
+app.set('views', 'src/client/views');
+app.set('view engine', 'ejs');
 
 module.exports = (movieService) => {
   const routes = new Routes(movieService);
 
   app.get('/', (req, res) => {
-    res.sendFile(path.join(viewsPath + '/index.html'));
+    res.render('index.ejs', {title: 'Movie Database App'});
   });
 
   app.get('/movie', routes.getMovie());
