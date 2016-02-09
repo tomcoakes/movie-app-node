@@ -22,7 +22,7 @@ describe('movieService', () => {
       .reply(200, omdbapiResponse);
 
       movieService.getMovie('inception', function(result) {
-        expect(result).to.equal('Inception');
+        expect(result.movieTitle).to.equal('Inception');
         done();
       });
     });
