@@ -11,7 +11,7 @@ module.exports = (movieService) => {
   const routes = new Routes(movieService);
 
   app.get('/', (req, res) => {
-    res.render('index.ejs', {title: 'Movie Database App'});
+    res.render('index', {title: 'Movie Database App'});
   });
 
   app.get('/movie', routes.getMovie());
