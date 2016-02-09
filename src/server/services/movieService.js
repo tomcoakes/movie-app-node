@@ -1,13 +1,14 @@
 const request = require('request');
 
+const generateViewModel = require('./viewModelGenerator');
+
 module.exports = {
 
   getMovie: function(movieTitle, callback) {
     request(`http://www.omdbapi.com/?t=${movieTitle}`, (err, response, body) => {
       if(err) {return console.log(err);}
       this._handleMissingMovie(body, callback);
-      const result = this.generateViewModel(JSON.parse(response.body));
-      // const result = JSON.parse(response.body).Title;
+      const result = generateViewModel(JSON.parse(response.body));
       return callback(result);
     });
   },
@@ -17,12 +18,5 @@ module.exports = {
       return callback({statusCode: 404, statusMessage: 'Not Found'});
     }
   },
-
-  generateViewModel: function(responseBody) {
-    return {
-      movieTitle: responseBody.Title
-    };
-  }
-
 
 };
