@@ -8,7 +8,7 @@ module.exports = function(movieService) {
     return (req, res) => {
       if(!req.query.title) {return res.sendStatus(404);}
       movieService.getMovie(req.query.title, function(result) {
-        res.render('movie', {movieTitle: result.movieTitle});
+        res.render('movie', {movieTitle: result.movieTitle, movieYear: result.movieYear});
       });
     };
   };

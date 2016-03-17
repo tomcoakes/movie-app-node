@@ -1,5 +1,6 @@
 module.exports = (responseBody) => {
   return {
-    movieTitle: responseBody.Title
+    movieTitle: responseBody.Title,
+    movieYear: responseBody.Year
   };
 };
