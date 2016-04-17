@@ -1,4 +1,4 @@
-const moment = require('moment');
+const formatDate = require('../helpers/formatDate');
 
 module.exports = (responseBody) => {
   return {
@@ -7,8 +7,3 @@ module.exports = (responseBody) => {
     releaseDate: formatDate(responseBody.Released)
   };
 };
-
-function formatDate(date) {
-  const parsedDate = new Date(date);
-  return moment(parsedDate).format('Do MMMM YYYY');
-}
