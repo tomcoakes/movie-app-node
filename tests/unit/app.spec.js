@@ -6,7 +6,12 @@ const server = require('../../src/server/server.js');
 
 const fakeMovieService = {
   getMovie: function(movieTitle, callback) {
-    return callback('Inception');
+    return callback(
+      { movieTitle: '',
+        movieYear: '',
+        releaseDate: '',
+        posterUrl: ''  }
+      );
   }
 };
 
