@@ -12,4 +12,8 @@ describe('viewModelGenerator generates a model that', () => {
   it('includes a year', () => {
     expect(generateMovieViewModel(omdbapiResponse).movieYear).to.equal('2010');
   })
+
+  it('includes the full release date in the correct format', () => {
+    expect(generateMovieViewModel(omdbapiResponse).releaseDate).to.equal('16th July 2010');
+  })
 });
