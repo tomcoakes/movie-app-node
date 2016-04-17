@@ -16,7 +16,7 @@ describe('movieService', () => {
   });
 
   describe('using nock', () => {
-    it('returns a callback', (done) => {
+    it('receives a response from omdb', (done) => {
       const omdbapi = nock('http://www.omdbapi.com')
       .get('/?t=inception')
       .reply(200, omdbapiResponse);
