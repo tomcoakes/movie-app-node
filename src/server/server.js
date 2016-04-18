@@ -16,5 +16,7 @@ module.exports = (movieService) => {
 
   app.get('/movie', routes.getMovie());
 
+  app.get('/search', routes.searchForMovie());
+
   return app;
 };

@@ -48,4 +48,13 @@ describe('routes', () => {
         .expect(404, done);
     });
   });
+
+  describe('\'search\' route', () => {
+
+    it('responds with a 200 status code when provided with a title parameter', (done) => {
+      supertest(app)
+        .get('/search?title=interstellar')
+        .expect(200, done);
+    });
+  });
 });

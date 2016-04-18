@@ -13,6 +13,12 @@ module.exports = function(movieService) {
     };
   };
 
+  routes.searchForMovie = () => {
+    return (req, res) => {
+      res.send(200);
+    };
+  };
+
   return routes;
 
 };
