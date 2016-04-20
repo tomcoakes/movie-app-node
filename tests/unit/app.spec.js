@@ -15,7 +15,20 @@ const fakeMovieService = {
   }
 };
 
-const app = server(fakeMovieService);
+const fakeSearchService = {
+  searchForMovie: function(movieTitle, callback) {
+    return callback(
+      [
+        { movieTitle: '',
+          movieYear: '',
+          releaseDate: '',
+          posterUrl: ''  }
+      ]
+    );
+  }
+};
+
+const app = server(fakeMovieService, fakeSearchService);
 
 describe('routes', () => {
 

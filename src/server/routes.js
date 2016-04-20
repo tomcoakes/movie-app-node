@@ -1,6 +1,6 @@
 const request = require('request');
 
-module.exports = function(movieService) {
+module.exports = function(movieService, searchService) {
 
   const routes = {};
 
@@ -15,7 +15,9 @@ module.exports = function(movieService) {
 
   routes.searchForMovie = () => {
     return (req, res) => {
-      res.send(200);
+      searchService.searchForMovie(req.query.title, function(result) {
+        res.send(result);
+      });
     };
   };
 

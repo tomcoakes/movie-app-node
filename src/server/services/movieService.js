@@ -5,10 +5,10 @@ const generateMovieViewModel = require('./movieViewModelGenerator');
 module.exports = {
 
   getMovie: function(movieTitle, callback) {
-    request(`http://www.omdbapi.com/?t=${movieTitle}`, (err, response, body) => {
+    request(`http://www.omdbapi.com/?t=${movieTitle}`, (err, res, body) => {
       if(err) {return console.log(err);}
       this._handleMissingMovie(body, callback);
-      const result = generateMovieViewModel(JSON.parse(response.body));
+      const result = generateMovieViewModel(JSON.parse(body));
       return callback(result);
     });
   },

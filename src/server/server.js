@@ -7,8 +7,8 @@ const Routes = require('./routes');
 app.set('views', 'src/client/views');
 app.set('view engine', 'ejs');
 
-module.exports = (movieService) => {
-  const routes = new Routes(movieService);
+module.exports = (movieService, searchService) => {
+  const routes = new Routes(movieService, searchService);
 
   app.get('/', (req, res) => {
     res.render('index', {title: 'Movie Database App'});

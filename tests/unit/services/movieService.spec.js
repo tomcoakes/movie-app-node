@@ -18,8 +18,8 @@ describe('movieService', () => {
   describe('using nock', () => {
     it('receives a response from omdb', (done) => {
       const omdbapi = nock('http://www.omdbapi.com')
-      .get('/?t=inception')
-      .reply(200, omdbapiResponse);
+        .get('/?t=inception')
+        .reply(200, omdbapiResponse);
 
       movieService.getMovie('inception', function(result) {
         expect(result.movieTitle).to.equal('Inception');
